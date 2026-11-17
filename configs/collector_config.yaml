@@ -1,0 +1,40 @@
+# Reddit Data Collector Configuration
+collector:
+  default_subreddits:
+    - "technology"
+    - "artificial"
+    - "science"
+    - "wallstreetbets"
+    - "MachineLearning"
+    - "futurology"
+    - "programming"
+    - "gadgets"
+    - "dataisbeautiful"
+    - "stocks"
+    - "worldnews"
+    - "gaming"
+  
+  # Listings to query: hot, new, rising, top
+  listings:
+    - "hot"
+    - "new"
+    - "rising"
+  
+  # Limits and Pagination
+  posts_per_request: 50      # Reddit API max is 100 per request
+  max_posts_per_sub: 150     # Total posts to fetch per subreddit across pages
+  
+  # Rate limiting and retry policy (aligned with Reddit API limits: 60 req/min for OAuth)
+  rate_limit:
+    min_seconds_between_requests: 1.1
+    max_retries: 5
+    backoff_factor: 2.0
+    timeout_seconds: 15
+    remaining_threshold_sleep: 5.0 # Sleep if x-ratelimit-remaining is below this value
+
+# Storage parameters
+storage:
+  type: "csv" # 'csv', 'sqlite', or 'postgresql'
+  csv_path: "data/raw/reddit_posts.csv"
+  test_dataset_path: "data/raw/sample_reddit_data.csv"
+  sqlite_path: "data/trendpulse.db"

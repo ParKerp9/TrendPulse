@@ -1,0 +1,42 @@
+{
+  "virality_classifier": {
+    "baseline_accuracy": 0.9666666666666667,
+    "advanced_accuracy": 0.8666666666666667,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0,
+    "roc_auc": 0.5172413793103448,
+    "confusion_matrix": [
+      [
+        26,
+        3
+      ],
+      [
+        1,
+        0
+      ]
+    ]
+  },
+  "lifecycle_classifier": {
+    "baseline_accuracy": 0.1,
+    "advanced_accuracy": 0.13333333333333333,
+    "macro_f1": 0.17672413793103448,
+    "weighted_f1": 0.037356321839080456
+  },
+  "popularity_forecaster": {
+    "baseline_mae": 2.347760932715826,
+    "advanced_mae": 2.2867333888319004,
+    "advanced_rmse": 2.502381901353816,
+    "advanced_r2": -4.658029540041664
+  },
+  "peak_time_estimator": {
+    "baseline_mae": 3.0066666666666673,
+    "advanced_mae": 2.7825064525752814,
+    "advanced_rmse": 3.0207042294531137,
+    "advanced_r2": -2.331053989763182
+  },
+  "sentiment_model": {
+    "accuracy": 0.9,
+    "f1_weighted": 0.8526315789473684
+  }
+}

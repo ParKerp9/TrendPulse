@@ -1,0 +1,1 @@
+"""TrendPulse Streamlit Application Package."""
